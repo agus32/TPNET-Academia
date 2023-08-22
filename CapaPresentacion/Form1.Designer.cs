@@ -42,6 +42,8 @@
             lblApellido = new Label();
             lblEmail = new Label();
             lblIdPersona = new Label();
+            btnModificar = new Button();
+            btnBorrar = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -160,11 +162,33 @@
             lblIdPersona.TabIndex = 16;
             lblIdPersona.Text = "IdPersona";
             // 
+            // btnModificar
+            // 
+            btnModificar.Location = new Point(12, 489);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(75, 23);
+            btnModificar.TabIndex = 17;
+            btnModificar.Text = "Modificar";
+            btnModificar.UseVisualStyleBackColor = true;
+            btnModificar.Click += btnModificar_Click;
+            // 
+            // btnBorrar
+            // 
+            btnBorrar.Location = new Point(107, 489);
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(75, 23);
+            btnBorrar.TabIndex = 18;
+            btnBorrar.Text = "Borrar";
+            btnBorrar.UseVisualStyleBackColor = true;
+            btnBorrar.Click += btnBorrar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1306, 561);
+            Controls.Add(btnBorrar);
+            Controls.Add(btnModificar);
             Controls.Add(lblIdPersona);
             Controls.Add(lblEmail);
             Controls.Add(lblApellido);
@@ -203,5 +227,7 @@
         private Label lblApellido;
         private Label lblEmail;
         private Label lblIdPersona;
+        private Button btnModificar;
+        private Button btnBorrar;
     }
 }

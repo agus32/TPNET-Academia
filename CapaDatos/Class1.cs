@@ -1,4 +1,5 @@
 ﻿using CapaDatos.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CapaDatos
 {
@@ -22,15 +23,25 @@ namespace CapaDatos
             _context.SaveChanges();
         }
 
-        public void ModificarUsuario(Usuario usuario)
+        public void ModificarUsuario(int IdUsuario, string NombreUsuario, string Clave, string Nombre, string Apellido, string Email, int IdPersona)
         {
-            _context.Usuarios.Update(usuario);
-            _context.SaveChanges();
+            var usuario = _context.Usuarios.Find(IdUsuario);
+            if (usuario != null)
+            {
+                usuario.NombreUsuario = NombreUsuario;
+                usuario.Clave = Clave;
+                usuario.Nombre = Nombre;
+                usuario.Apellido = Apellido;
+                usuario.Email = Email;
+                usuario.IdPersona = IdPersona;               
+                _context.Update(usuario);
+                _context.SaveChanges();
+            }
         }
 
-        public void BorrarUsuario(int id)
+        public void BorrarUsuario(int IdUsuario)
         {
-            var usuario = _context.Usuarios.Find(id);
+            var usuario = _context.Usuarios.Find(IdUsuario);
             if (usuario != null)
             {
                 _context.Usuarios.Remove(usuario);

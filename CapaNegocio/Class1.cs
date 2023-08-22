@@ -1,5 +1,6 @@
 ﻿using CapaDatos.Models;
 using CapaDatos;
+using Microsoft.EntityFrameworkCore;
 
 namespace CapaNegocio
 {
@@ -35,16 +36,16 @@ namespace CapaNegocio
             _usuarioDAL.AgregarUsuario(nuevoUsuario);
         }
 
-        public void ModificarUsuario(Usuario usuario)
+        public void ModificarUsuario(string IdUsuario, string NombreUsuario, string Clave, string Nombre, string Apellido, string Email, string IdPersona)
         {
-            // Puedes realizar validaciones o lógica adicional antes de actualizar el usuario
-            _usuarioDAL.ModificarUsuario(usuario);
+            _usuarioDAL.ModificarUsuario(Convert.ToInt32(IdUsuario), NombreUsuario,  Clave,  Nombre,  Apellido,  Email, Convert.ToInt32(IdPersona));
+
         }
 
-        public void BorrarUsuario(int id)
+        public void BorrarUsuario(string IdUsuario)
         {
-            // Puedes realizar validaciones o lógica adicional antes de eliminar el usuario
-            _usuarioDAL.BorrarUsuario(id);
+            
+            _usuarioDAL.BorrarUsuario(Convert.ToInt32(IdUsuario));
         }
     }
 }
