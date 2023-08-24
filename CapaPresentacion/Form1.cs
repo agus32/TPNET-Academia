@@ -98,5 +98,11 @@ namespace CapaPresentacion
             else
                 MessageBox.Show("seleccione una fila por favor");
         }
+
+        private void btnAltaPersona_frmFrom1_Click(object sender, EventArgs e)
+        {
+            Form form = new frmAltaPersonas();
+            form.Show();
+        }
     }
 }

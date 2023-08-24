@@ -38,7 +38,13 @@ namespace CapaNegocio
 
         public void ModificarUsuario(string IdUsuario, string NombreUsuario, string Clave, string Nombre, string Apellido, string Email, string IdPersona)
         {
-            _usuarioDAL.ModificarUsuario(Convert.ToInt32(IdUsuario), NombreUsuario,  Clave,  Nombre,  Apellido,  Email, Convert.ToInt32(IdPersona));
+            _usuarioDAL.ModificarUsuario(Convert.ToInt32(IdUsuario),
+                                         NombreUsuario,
+                                         Clave,
+                                         Nombre,
+                                         Apellido,
+                                         Email,
+                                         Convert.ToInt32(IdPersona));
 
         }
 
