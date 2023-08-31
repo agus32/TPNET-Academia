@@ -32,5 +32,13 @@ namespace CapaPresentacion
             usuarioForm.ShowDialog();
             this.Show();
         }
+
+        private void btnPersona_Click(object sender, EventArgs e)
+        {
+            PersonaForm PersonaForm = new PersonaForm();
+            this.Hide();
+            PersonaForm.ShowDialog();
+            this.Show();
+        }
     }
 }
