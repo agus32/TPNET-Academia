@@ -1,6 +1,5 @@
-﻿using CapaDatos.Models;
+﻿using CapaEntidades.Models;
 using CapaDatos;
-using Microsoft.EntityFrameworkCore;
 
 namespace CapaNegocio
 {

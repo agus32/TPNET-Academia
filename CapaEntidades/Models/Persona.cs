@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CapaDatos.Models;
+namespace CapaEntidades.Models;
 
 public partial class Persona
 {

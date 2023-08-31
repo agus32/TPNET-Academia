@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class Form1
+    partial class UsuarioForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -44,6 +44,7 @@
             lblIdPersona = new Label();
             btnModificar = new Button();
             btnBorrar = new Button();
+            btnMenu = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -182,11 +183,21 @@
             btnBorrar.UseVisualStyleBackColor = true;
             btnBorrar.Click += btnBorrar_Click;
             // 
+            // btnMenu
+            // 
+            btnMenu.Location = new Point(1075, 489);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(219, 60);
+            btnMenu.TabIndex = 19;
+            btnMenu.Text = "Volver al Menu Principal";
+            btnMenu.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1306, 561);
+            Controls.Add(btnMenu);
             Controls.Add(btnBorrar);
             Controls.Add(btnModificar);
             Controls.Add(lblIdPersona);
@@ -229,5 +240,6 @@
         private Label lblIdPersona;
         private Button btnModificar;
         private Button btnBorrar;
+        private Button btnMenu;
     }
 }

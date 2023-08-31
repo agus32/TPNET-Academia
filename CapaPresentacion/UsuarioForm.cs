@@ -1,16 +1,16 @@
 
-using CapaDatos.Models;
+using CapaEntidades.Models;
 using CapaNegocio;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace CapaPresentacion
 {
-    public partial class Form1 : Form
+    public partial class UsuarioForm : Form
     {
         private readonly UsuarioBLL _usuarioBLL;
         private bool Editar = false;
         string IdUsuario;
-        public Form1()
+        public UsuarioForm()
         {
             InitializeComponent();
             _usuarioBLL = new UsuarioBLL();
@@ -97,6 +97,11 @@ namespace CapaPresentacion
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
+        }
+
+        private void btnMenu_Click (object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using CapaDatos.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using CapaEntidades.Models;
+
 
 namespace CapaDatos
 {

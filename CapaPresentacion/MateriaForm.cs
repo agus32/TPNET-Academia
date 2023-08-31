@@ -1,6 +1,5 @@
 ﻿
-using CapaDatos.Models;
-using CapaDatos;
+using CapaEntidades.Models;
 using CapaNegocio;
 using System;
 using System.Collections.Generic;
@@ -102,6 +101,11 @@ namespace CapaPresentacion
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

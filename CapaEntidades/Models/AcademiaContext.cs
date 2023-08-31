@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace CapaDatos.Models;
+namespace CapaEntidades.Models;
 
 public partial class AcademiaContext : DbContext
 {

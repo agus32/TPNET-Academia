@@ -40,6 +40,7 @@
             txtIdPlan = new TextBox();
             btnModificar = new Button();
             btnBorrar = new Button();
+            btnMenu = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -146,11 +147,22 @@
             btnBorrar.UseVisualStyleBackColor = true;
             btnBorrar.Click += btnBorrar_Click;
             // 
+            // btnMenu
+            // 
+            btnMenu.Location = new Point(784, 446);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(187, 54);
+            btnMenu.TabIndex = 12;
+            btnMenu.Text = "Volver al Menu Principal";
+            btnMenu.UseVisualStyleBackColor = true;
+            btnMenu.Click += btnMenu_Click;
+            // 
             // MateriaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(985, 512);
+            Controls.Add(btnMenu);
             Controls.Add(btnBorrar);
             Controls.Add(btnModificar);
             Controls.Add(txtIdPlan);
@@ -185,5 +197,6 @@
         private TextBox txtIdPlan;
         private Button btnModificar;
         private Button btnBorrar;
+        private Button btnMenu;
     }
 }
