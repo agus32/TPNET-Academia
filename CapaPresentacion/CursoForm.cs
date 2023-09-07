@@ -1,29 +1,27 @@
-﻿
-using CapaEntidades.Models;
+﻿using CapaEntidades.Models;
 using CapaNegocio;
-
 
 namespace CapaPresentacion
 {
-    public partial class MateriaForm : Form
+    public partial class CursoForm : Form
     {
-        private readonly MateriaBLL _materiaBLL;
+        private readonly CursoBLL _cursoBLL;
         private bool Editar = false;
-        string IdMateria;
-        public MateriaForm()
+        string IdCurso;
+        public CursoForm()
         {
             InitializeComponent();
-            _materiaBLL = new MateriaBLL();
+            _cursoBLL = new CursoBLL();
         }
 
-        private void MateriaForm_Load(object sender, EventArgs e)
+        private void CursoForm_Load(object sender, EventArgs e)
         {
-            MostrarMaterias();
+            MostrarCursos();
         }
-        private void MostrarMaterias()
+        private void MostrarCursos()
         {
-            List<Materia> materias = _materiaBLL.GetAllMaterias();
-            dataGridView1.DataSource = materias;
+            List<Curso> cursos = _cursoBLL.GetAllCursos();
+            dataGridView1.DataSource = cursos;
         }
 
 
@@ -34,9 +32,9 @@ namespace CapaPresentacion
                 try
                 {
 
-                    _materiaBLL.AgregarMateria(txtDescMateria.Text, txtHsSemanales.Text, txtHsTotales.Text, txtIdPlan.Text);
+                    _cursoBLL.AgregarCurso(txtIdMateria.Text, txtIdComision.Text, txtAnioCalendario.Text, txtCupo.Text);
                     MessageBox.Show("se inserto correctamente");
-                    MostrarMaterias();
+                    MostrarCursos();
 
                 }
                 catch (Exception ex)
@@ -49,9 +47,9 @@ namespace CapaPresentacion
                 try
                 {
 
-                    _materiaBLL.ModificarMateria(IdMateria, txtDescMateria.Text, txtHsSemanales.Text, txtHsTotales.Text, txtIdPlan.Text);
+                    _cursoBLL.ModificarCurso(IdCurso, txtIdMateria.Text, txtIdComision.Text, txtAnioCalendario.Text, txtCupo.Text);
                     MessageBox.Show("se edito correctamente");
-                    MostrarMaterias();
+                    MostrarCursos();
                     limpiarForm();
                     Editar = false;
                 }
@@ -66,30 +64,30 @@ namespace CapaPresentacion
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 Editar = true;
-                IdMateria = dataGridView1.CurrentRow.Cells["IdMateria"].Value.ToString();
-                txtDescMateria.Text = dataGridView1.CurrentRow.Cells["DescMateria"].Value?.ToString() ?? "";
-                txtHsSemanales.Text = dataGridView1.CurrentRow.Cells["HsSemanales"].Value?.ToString() ?? "";
-                txtHsTotales.Text = dataGridView1.CurrentRow.Cells["HsTotales"].Value?.ToString() ?? "";
-                txtIdPlan.Text = dataGridView1.CurrentRow.Cells["IdPlan"].Value?.ToString() ?? "";
+                IdCurso = dataGridView1.CurrentRow.Cells["IdCurso"].Value.ToString();
+                txtIdMateria.Text = dataGridView1.CurrentRow.Cells["IdMateria"].Value?.ToString() ?? "";
+                txtIdComision.Text = dataGridView1.CurrentRow.Cells["IdComision"].Value?.ToString() ?? "";
+                txtAnioCalendario.Text = dataGridView1.CurrentRow.Cells["AnioCalendario"].Value?.ToString() ?? "";
+                txtCupo.Text = dataGridView1.CurrentRow.Cells["Cupo"].Value?.ToString() ?? "";
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
         }
         private void limpiarForm()
         {
-            txtDescMateria.Clear();
-            txtHsSemanales.Clear();
-            txtHsTotales.Clear();
-            txtIdPlan.Clear();
+            txtIdMateria.Clear();
+            txtIdComision.Clear();
+            txtAnioCalendario.Clear();
+            txtCupo.Clear();
         }
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
 
-                _materiaBLL.BorrarMateria(dataGridView1.CurrentRow.Cells["IdMateria"].Value.ToString());
+                _cursoBLL.BorrarCurso(dataGridView1.CurrentRow.Cells["IdCurso"].Value.ToString());
                 MessageBox.Show("Eliminado correctamente");
-                MostrarMaterias();
+                MostrarCursos();
             }
             else
                 MessageBox.Show("seleccione una fila por favor");
@@ -100,7 +98,5 @@ namespace CapaPresentacion
             this.Close();
         }
     }
-
-
 }
 

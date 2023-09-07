@@ -40,5 +40,13 @@ namespace CapaPresentacion
             PersonaForm.ShowDialog();
             this.Show();
         }
+
+        private void btnCursos_Click(object sender, EventArgs e)
+        {
+            CursoForm CursoForm = new CursoForm();
+            this.Hide();
+            CursoForm.ShowDialog();
+            this.Show();
+        }
     }
 }
