@@ -20,6 +20,10 @@ namespace CapaDatos
             return _context.Personas.ToList();
         }
 
+        public List<Plane> GetAllPlanes()
+        {
+            return _context.Planes.ToList();
+        }
         public void AgregaPersona(Persona persona)
         {
             _context.Personas.Add(persona);

@@ -57,132 +57,139 @@
             // lblNombre_frmAltaPersona
             // 
             lblNombre_frmAltaPersona.AutoSize = true;
-            lblNombre_frmAltaPersona.Location = new Point(99, 24);
+            lblNombre_frmAltaPersona.Location = new Point(87, 18);
             lblNombre_frmAltaPersona.Name = "lblNombre_frmAltaPersona";
-            lblNombre_frmAltaPersona.Size = new Size(64, 20);
+            lblNombre_frmAltaPersona.Size = new Size(51, 15);
             lblNombre_frmAltaPersona.TabIndex = 0;
             lblNombre_frmAltaPersona.Text = "Nombre";
             // 
             // lblApellido_frmAltaPersona
             // 
             lblApellido_frmAltaPersona.AutoSize = true;
-            lblApellido_frmAltaPersona.Location = new Point(97, 66);
+            lblApellido_frmAltaPersona.Location = new Point(85, 50);
             lblApellido_frmAltaPersona.Name = "lblApellido_frmAltaPersona";
-            lblApellido_frmAltaPersona.Size = new Size(66, 20);
+            lblApellido_frmAltaPersona.Size = new Size(51, 15);
             lblApellido_frmAltaPersona.TabIndex = 1;
             lblApellido_frmAltaPersona.Text = "Apellido";
             // 
             // lblDireccion_frmAltaPersona
             // 
             lblDireccion_frmAltaPersona.AutoSize = true;
-            lblDireccion_frmAltaPersona.Location = new Point(91, 111);
+            lblDireccion_frmAltaPersona.Location = new Point(80, 83);
             lblDireccion_frmAltaPersona.Name = "lblDireccion_frmAltaPersona";
-            lblDireccion_frmAltaPersona.Size = new Size(72, 20);
+            lblDireccion_frmAltaPersona.Size = new Size(57, 15);
             lblDireccion_frmAltaPersona.TabIndex = 2;
             lblDireccion_frmAltaPersona.Text = "Direccion";
             // 
             // lblMail_frmAltaPersona
             // 
             lblMail_frmAltaPersona.AutoSize = true;
-            lblMail_frmAltaPersona.Location = new Point(120, 158);
+            lblMail_frmAltaPersona.Location = new Point(105, 118);
             lblMail_frmAltaPersona.Name = "lblMail_frmAltaPersona";
-            lblMail_frmAltaPersona.Size = new Size(38, 20);
+            lblMail_frmAltaPersona.Size = new Size(30, 15);
             lblMail_frmAltaPersona.TabIndex = 3;
             lblMail_frmAltaPersona.Text = "Mail";
             // 
             // lblFechaNac_frmAltaPersona
             // 
             lblFechaNac_frmAltaPersona.AutoSize = true;
-            lblFechaNac_frmAltaPersona.Location = new Point(12, 259);
+            lblFechaNac_frmAltaPersona.Location = new Point(10, 194);
             lblFechaNac_frmAltaPersona.Name = "lblFechaNac_frmAltaPersona";
-            lblFechaNac_frmAltaPersona.Size = new Size(146, 20);
+            lblFechaNac_frmAltaPersona.Size = new Size(117, 15);
             lblFechaNac_frmAltaPersona.TabIndex = 4;
             lblFechaNac_frmAltaPersona.Text = "Fecha de nacimiento";
             // 
             // lblLegajo_frmAltaPersona
             // 
             lblLegajo_frmAltaPersona.AutoSize = true;
-            lblLegajo_frmAltaPersona.Location = new Point(104, 304);
+            lblLegajo_frmAltaPersona.Location = new Point(91, 228);
             lblLegajo_frmAltaPersona.Name = "lblLegajo_frmAltaPersona";
-            lblLegajo_frmAltaPersona.Size = new Size(54, 20);
+            lblLegajo_frmAltaPersona.Size = new Size(42, 15);
             lblLegajo_frmAltaPersona.TabIndex = 5;
             lblLegajo_frmAltaPersona.Text = "Legajo";
             // 
             // lblTelfono_frmAltaPersona
             // 
             lblTelfono_frmAltaPersona.AutoSize = true;
-            lblTelfono_frmAltaPersona.Location = new Point(91, 211);
+            lblTelfono_frmAltaPersona.Location = new Point(80, 158);
             lblTelfono_frmAltaPersona.Name = "lblTelfono_frmAltaPersona";
-            lblTelfono_frmAltaPersona.Size = new Size(67, 20);
+            lblTelfono_frmAltaPersona.Size = new Size(52, 15);
             lblTelfono_frmAltaPersona.TabIndex = 6;
             lblTelfono_frmAltaPersona.Text = "Telefono";
             // 
             // lblTipoPersona_frmAltaPersona
             // 
             lblTipoPersona_frmAltaPersona.AutoSize = true;
-            lblTipoPersona_frmAltaPersona.Location = new Point(123, 346);
+            lblTipoPersona_frmAltaPersona.Location = new Point(108, 260);
             lblTipoPersona_frmAltaPersona.Name = "lblTipoPersona_frmAltaPersona";
-            lblTipoPersona_frmAltaPersona.Size = new Size(35, 20);
+            lblTipoPersona_frmAltaPersona.Size = new Size(27, 15);
             lblTipoPersona_frmAltaPersona.TabIndex = 7;
             lblTipoPersona_frmAltaPersona.Text = "Rol ";
             // 
             // lblIdPlan_frmAltaPersona
             // 
             lblIdPlan_frmAltaPersona.AutoSize = true;
-            lblIdPlan_frmAltaPersona.Location = new Point(47, 392);
+            lblIdPlan_frmAltaPersona.Location = new Point(41, 294);
             lblIdPlan_frmAltaPersona.Name = "lblIdPlan_frmAltaPersona";
-            lblIdPlan_frmAltaPersona.Size = new Size(111, 20);
+            lblIdPlan_frmAltaPersona.Size = new Size(88, 15);
             lblIdPlan_frmAltaPersona.TabIndex = 8;
             lblIdPlan_frmAltaPersona.Text = "Plan de estudio";
             // 
             // txtNombre_frmAltaPersona
             // 
-            txtNombre_frmAltaPersona.Location = new Point(187, 24);
+            txtNombre_frmAltaPersona.Location = new Point(164, 18);
+            txtNombre_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             txtNombre_frmAltaPersona.Name = "txtNombre_frmAltaPersona";
-            txtNombre_frmAltaPersona.Size = new Size(294, 27);
+            txtNombre_frmAltaPersona.Size = new Size(258, 23);
             txtNombre_frmAltaPersona.TabIndex = 9;
             // 
             // txtApellido_frmAltaPersona
             // 
-            txtApellido_frmAltaPersona.Location = new Point(187, 66);
+            txtApellido_frmAltaPersona.Location = new Point(164, 50);
+            txtApellido_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             txtApellido_frmAltaPersona.Name = "txtApellido_frmAltaPersona";
-            txtApellido_frmAltaPersona.Size = new Size(294, 27);
+            txtApellido_frmAltaPersona.Size = new Size(258, 23);
             txtApellido_frmAltaPersona.TabIndex = 10;
             // 
             // txtDireccion_frmAltaPersona
             // 
-            txtDireccion_frmAltaPersona.Location = new Point(187, 111);
+            txtDireccion_frmAltaPersona.Location = new Point(164, 83);
+            txtDireccion_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             txtDireccion_frmAltaPersona.Name = "txtDireccion_frmAltaPersona";
-            txtDireccion_frmAltaPersona.Size = new Size(294, 27);
+            txtDireccion_frmAltaPersona.Size = new Size(258, 23);
             txtDireccion_frmAltaPersona.TabIndex = 11;
             // 
             // txtMail_frmAltaPersona
             // 
-            txtMail_frmAltaPersona.Location = new Point(187, 158);
+            txtMail_frmAltaPersona.Location = new Point(164, 118);
+            txtMail_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             txtMail_frmAltaPersona.Name = "txtMail_frmAltaPersona";
-            txtMail_frmAltaPersona.Size = new Size(294, 27);
+            txtMail_frmAltaPersona.Size = new Size(258, 23);
             txtMail_frmAltaPersona.TabIndex = 12;
             // 
             // txtLegajo_frmAltaPersona
             // 
-            txtLegajo_frmAltaPersona.Location = new Point(187, 304);
+            txtLegajo_frmAltaPersona.Location = new Point(164, 228);
+            txtLegajo_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             txtLegajo_frmAltaPersona.Name = "txtLegajo_frmAltaPersona";
-            txtLegajo_frmAltaPersona.Size = new Size(294, 27);
+            txtLegajo_frmAltaPersona.Size = new Size(258, 23);
             txtLegajo_frmAltaPersona.TabIndex = 14;
             // 
             // txtTelefono_frmAltaPersona
             // 
-            txtTelefono_frmAltaPersona.Location = new Point(187, 211);
+            txtTelefono_frmAltaPersona.Location = new Point(164, 158);
+            txtTelefono_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             txtTelefono_frmAltaPersona.Name = "txtTelefono_frmAltaPersona";
-            txtTelefono_frmAltaPersona.Size = new Size(294, 27);
+            txtTelefono_frmAltaPersona.Size = new Size(258, 23);
             txtTelefono_frmAltaPersona.TabIndex = 15;
             // 
             // dtpFechaNac_frmAltaPersona
             // 
             dtpFechaNac_frmAltaPersona.AllowDrop = true;
-            dtpFechaNac_frmAltaPersona.Location = new Point(187, 259);
+            dtpFechaNac_frmAltaPersona.Location = new Point(164, 194);
+            dtpFechaNac_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             dtpFechaNac_frmAltaPersona.Name = "dtpFechaNac_frmAltaPersona";
-            dtpFechaNac_frmAltaPersona.Size = new Size(294, 27);
+            dtpFechaNac_frmAltaPersona.Size = new Size(258, 23);
             dtpFechaNac_frmAltaPersona.TabIndex = 18;
             // 
             // cbTipoPersona_frmAltaPersona
@@ -190,37 +197,40 @@
             cbTipoPersona_frmAltaPersona.DropDownStyle = ComboBoxStyle.DropDownList;
             cbTipoPersona_frmAltaPersona.FormattingEnabled = true;
             cbTipoPersona_frmAltaPersona.Items.AddRange(new object[] { "Alumno", "Profesor" });
-            cbTipoPersona_frmAltaPersona.Location = new Point(187, 346);
+            cbTipoPersona_frmAltaPersona.Location = new Point(164, 260);
+            cbTipoPersona_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             cbTipoPersona_frmAltaPersona.Name = "cbTipoPersona_frmAltaPersona";
-            cbTipoPersona_frmAltaPersona.Size = new Size(294, 28);
+            cbTipoPersona_frmAltaPersona.Size = new Size(258, 23);
             cbTipoPersona_frmAltaPersona.TabIndex = 19;
             // 
             // cbPlan_frmAltaPersona
             // 
             cbPlan_frmAltaPersona.DropDownStyle = ComboBoxStyle.DropDownList;
             cbPlan_frmAltaPersona.FormattingEnabled = true;
-            cbPlan_frmAltaPersona.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
-            cbPlan_frmAltaPersona.Location = new Point(187, 392);
+            cbPlan_frmAltaPersona.Location = new Point(164, 294);
+            cbPlan_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             cbPlan_frmAltaPersona.Name = "cbPlan_frmAltaPersona";
-            cbPlan_frmAltaPersona.Size = new Size(294, 28);
+            cbPlan_frmAltaPersona.Size = new Size(258, 23);
             cbPlan_frmAltaPersona.TabIndex = 20;
             // 
             // dgvPersonas_AltaPersonas
             // 
             dgvPersonas_AltaPersonas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPersonas_AltaPersonas.Location = new Point(540, 33);
+            dgvPersonas_AltaPersonas.Location = new Point(472, 25);
+            dgvPersonas_AltaPersonas.Margin = new Padding(3, 2, 3, 2);
             dgvPersonas_AltaPersonas.Name = "dgvPersonas_AltaPersonas";
             dgvPersonas_AltaPersonas.RowHeadersWidth = 51;
             dgvPersonas_AltaPersonas.RowTemplate.Height = 29;
-            dgvPersonas_AltaPersonas.Size = new Size(839, 631);
+            dgvPersonas_AltaPersonas.Size = new Size(734, 473);
             dgvPersonas_AltaPersonas.TabIndex = 21;
             // 
             // btnGuardar_frmAltaPersonas
             // 
             btnGuardar_frmAltaPersonas.BackColor = Color.FromArgb(0, 192, 0);
-            btnGuardar_frmAltaPersonas.Location = new Point(187, 484);
+            btnGuardar_frmAltaPersonas.Location = new Point(164, 363);
+            btnGuardar_frmAltaPersonas.Margin = new Padding(3, 2, 3, 2);
             btnGuardar_frmAltaPersonas.Name = "btnGuardar_frmAltaPersonas";
-            btnGuardar_frmAltaPersonas.Size = new Size(294, 71);
+            btnGuardar_frmAltaPersonas.Size = new Size(257, 53);
             btnGuardar_frmAltaPersonas.TabIndex = 22;
             btnGuardar_frmAltaPersonas.Text = "Guardar";
             btnGuardar_frmAltaPersonas.UseVisualStyleBackColor = false;
@@ -228,9 +238,10 @@
             // 
             // btnModificar_frmAltaPersona
             // 
-            btnModificar_frmAltaPersona.Location = new Point(187, 575);
+            btnModificar_frmAltaPersona.Location = new Point(164, 431);
+            btnModificar_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             btnModificar_frmAltaPersona.Name = "btnModificar_frmAltaPersona";
-            btnModificar_frmAltaPersona.Size = new Size(131, 48);
+            btnModificar_frmAltaPersona.Size = new Size(115, 36);
             btnModificar_frmAltaPersona.TabIndex = 23;
             btnModificar_frmAltaPersona.Text = "Modificar";
             btnModificar_frmAltaPersona.UseVisualStyleBackColor = true;
@@ -240,9 +251,10 @@
             // 
             btnBorrar_frmAltaPersona.BackColor = Color.Red;
             btnBorrar_frmAltaPersona.ForeColor = SystemColors.ButtonHighlight;
-            btnBorrar_frmAltaPersona.Location = new Point(350, 575);
+            btnBorrar_frmAltaPersona.Location = new Point(306, 431);
+            btnBorrar_frmAltaPersona.Margin = new Padding(3, 2, 3, 2);
             btnBorrar_frmAltaPersona.Name = "btnBorrar_frmAltaPersona";
-            btnBorrar_frmAltaPersona.Size = new Size(131, 48);
+            btnBorrar_frmAltaPersona.Size = new Size(115, 36);
             btnBorrar_frmAltaPersona.TabIndex = 24;
             btnBorrar_frmAltaPersona.Text = "Borrar";
             btnBorrar_frmAltaPersona.UseVisualStyleBackColor = false;
@@ -250,9 +262,10 @@
             // 
             // btnClose
             // 
-            btnClose.Location = new Point(187, 642);
+            btnClose.Location = new Point(164, 482);
+            btnClose.Margin = new Padding(3, 2, 3, 2);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(294, 48);
+            btnClose.Size = new Size(257, 36);
             btnClose.TabIndex = 25;
             btnClose.Text = "Volver al menu principal";
             btnClose.UseVisualStyleBackColor = true;
@@ -260,9 +273,9 @@
             // 
             // PersonaForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1412, 715);
+            ClientSize = new Size(1236, 536);
             Controls.Add(btnClose);
             Controls.Add(btnBorrar_frmAltaPersona);
             Controls.Add(btnModificar_frmAltaPersona);
@@ -286,6 +299,7 @@
             Controls.Add(lblDireccion_frmAltaPersona);
             Controls.Add(lblApellido_frmAltaPersona);
             Controls.Add(lblNombre_frmAltaPersona);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "PersonaForm";
             Text = "Form2";
             Load += frmAltaPersonas_Load_1;

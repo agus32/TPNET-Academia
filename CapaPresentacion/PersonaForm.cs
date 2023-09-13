@@ -28,6 +28,11 @@ namespace CapaPresentacion
         private void frmAltaPersonas_Load_1(object sender, EventArgs e)
         {
             MostrarPersonas();
+            List<Plane> planes = _personaBLL.GetAllPlanes();
+            cbPlan_frmAltaPersona.DataSource = planes;
+            cbPlan_frmAltaPersona.DisplayMember = "DescPlan";
+            cbPlan_frmAltaPersona.ValueMember = "IdPlan";
+            cbPlan_frmAltaPersona.SelectedIndex = -1;
         }
         private void MostrarPersonas()
         {
@@ -45,24 +50,24 @@ namespace CapaPresentacion
                     _personaBLL.AgregarPersona(txtNombre_frmAltaPersona.Text, txtApellido_frmAltaPersona.Text,
                         txtDireccion_frmAltaPersona.Text, txtMail_frmAltaPersona.Text, txtTelefono_frmAltaPersona.Text,
                         dtpFechaNac_frmAltaPersona.Value, txtLegajo_frmAltaPersona.Text, cbTipoPersona_frmAltaPersona.SelectedItem.ToString(),
-                        cbPlan_frmAltaPersona.SelectedItem.ToString());
+                        (int)cbPlan_frmAltaPersona.SelectedValue);
                     MessageBox.Show("Inserción completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarPersonas();
                     LimpiarForm();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo insertar los datos por: " + ex,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else 
+            else
             {
                 try
                 {
                     _personaBLL.ModificarPersona(IdPersona, txtNombre_frmAltaPersona.Text, txtApellido_frmAltaPersona.Text,
                         txtDireccion_frmAltaPersona.Text, txtMail_frmAltaPersona.Text, txtTelefono_frmAltaPersona.Text,
                         dtpFechaNac_frmAltaPersona.Value, txtLegajo_frmAltaPersona.Text,
-                        cbTipoPersona_frmAltaPersona.SelectedItem.ToString(), cbPlan_frmAltaPersona.SelectedItem.ToString());
+                        cbTipoPersona_frmAltaPersona.SelectedItem.ToString(), (int)cbPlan_frmAltaPersona.SelectedValue);
                     MessageBox.Show("Edición completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarPersonas();
                     LimpiarForm();
@@ -83,7 +88,7 @@ namespace CapaPresentacion
             txtLegajo_frmAltaPersona.Clear();
             txtMail_frmAltaPersona.Clear();
             txtTelefono_frmAltaPersona.Clear();
-            cbPlan_frmAltaPersona.ResetText();
+            cbPlan_frmAltaPersona.SelectedIndex = -1;
             cbTipoPersona_frmAltaPersona.ResetText();
             dtpFechaNac_frmAltaPersona.ResetText();
         }
@@ -102,7 +107,7 @@ namespace CapaPresentacion
                 DateTime? fecha = valorCelda as DateTime?;
                 dtpFechaNac_frmAltaPersona.Value = fecha ?? DateTime.Now;
                 cbTipoPersona_frmAltaPersona.Text = dgvPersonas_AltaPersonas.CurrentRow.Cells["TipoPersona"].Value?.ToString() ?? "";
-                cbPlan_frmAltaPersona.Text = dgvPersonas_AltaPersonas.CurrentRow.Cells["IdPlan"].Value.ToString();
+                cbPlan_frmAltaPersona.SelectedValue = Convert.ToInt32(dgvPersonas_AltaPersonas.CurrentRow.Cells["IdPlan"].Value);
             }
             else
             {

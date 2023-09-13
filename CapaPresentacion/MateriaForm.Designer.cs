@@ -37,10 +37,10 @@
             lblIdPlan = new Label();
             txtHsSemanales = new TextBox();
             txtHsTotales = new TextBox();
-            txtIdPlan = new TextBox();
             btnModificar = new Button();
             btnBorrar = new Button();
             btnMenu = new Button();
+            cbIdPlan = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -120,13 +120,6 @@
             txtHsTotales.Size = new Size(170, 23);
             txtHsTotales.TabIndex = 8;
             // 
-            // txtIdPlan
-            // 
-            txtIdPlan.Location = new Point(801, 200);
-            txtIdPlan.Name = "txtIdPlan";
-            txtIdPlan.Size = new Size(170, 23);
-            txtIdPlan.TabIndex = 9;
-            // 
             // btnModificar
             // 
             btnModificar.Location = new Point(12, 446);
@@ -157,15 +150,23 @@
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += btnMenu_Click;
             // 
+            // cbIdPlan
+            // 
+            cbIdPlan.FormattingEnabled = true;
+            cbIdPlan.Location = new Point(801, 200);
+            cbIdPlan.Name = "cbIdPlan";
+            cbIdPlan.Size = new Size(170, 23);
+            cbIdPlan.TabIndex = 13;
+            // 
             // MateriaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(985, 512);
+            Controls.Add(cbIdPlan);
             Controls.Add(btnMenu);
             Controls.Add(btnBorrar);
             Controls.Add(btnModificar);
-            Controls.Add(txtIdPlan);
             Controls.Add(txtHsTotales);
             Controls.Add(txtHsSemanales);
             Controls.Add(lblIdPlan);
@@ -194,9 +195,9 @@
         private Label lblIdPlan;
         private TextBox txtHsSemanales;
         private TextBox txtHsTotales;
-        private TextBox txtIdPlan;
         private Button btnModificar;
         private Button btnBorrar;
         private Button btnMenu;
+        private ComboBox cbIdPlan;
     }
 }

@@ -17,6 +17,11 @@ namespace CapaDatos
             return _context.Materias.ToList();
         }
 
+        public List<Plane> GetAllPlanes()
+        {
+              return _context.Planes.ToList();
+        }
+
         public void AgregarMateria(Materia materia)
         {
             _context.Materias.Add(materia);

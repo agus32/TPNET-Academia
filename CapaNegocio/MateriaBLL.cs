@@ -17,7 +17,12 @@ namespace CapaNegocio
             return _materiaDAL.GetAllMaterias();
         }
 
-        public void AgregarMateria(string DescMateria, string HsSemanales, string HsTotales, string IdPlan)
+        public List<Plane> GetAllPlanes()
+        {
+            return _materiaDAL.GetAllPlanes();
+        }
+
+        public void AgregarMateria(string DescMateria, string HsSemanales, string HsTotales, int IdPlan)
         {
 
             Materia nuevaMateria = new Materia
@@ -25,15 +30,15 @@ namespace CapaNegocio
                 DescMateria = DescMateria,
                 HsSemanales = Convert.ToInt32(HsSemanales),
                 HsTotales = Convert.ToInt32(HsTotales),
-                IdPlan = Convert.ToInt32(IdPlan)
+                IdPlan = IdPlan
             };
 
             _materiaDAL.AgregarMateria(nuevaMateria);
         }
 
-        public void ModificarMateria(string IdMateria, string DescMateria, string HsSemanales, string HsTotales, string IdPlan)
+        public void ModificarMateria(string IdMateria, string DescMateria, string HsSemanales, string HsTotales, int IdPlan)
         {
-            _materiaDAL.ModificarMateria(Convert.ToInt32(IdMateria), DescMateria, Convert.ToInt32(HsSemanales), Convert.ToInt32(HsTotales), Convert.ToInt32(IdPlan));
+            _materiaDAL.ModificarMateria(Convert.ToInt32(IdMateria), DescMateria, Convert.ToInt32(HsSemanales), Convert.ToInt32(HsTotales),IdPlan);
 
         }
 

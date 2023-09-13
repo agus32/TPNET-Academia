@@ -19,6 +19,11 @@ namespace CapaPresentacion
         private void MateriaForm_Load(object sender, EventArgs e)
         {
             MostrarMaterias();
+            List<Plane> planes = _materiaBLL.GetAllPlanes();
+            cbIdPlan.DataSource = planes;
+            cbIdPlan.DisplayMember = "DescPlan";
+            cbIdPlan.ValueMember = "IdPlan";
+            cbIdPlan.SelectedIndex = -1;
         }
         private void MostrarMaterias()
         {
@@ -34,14 +39,14 @@ namespace CapaPresentacion
                 try
                 {
 
-                    _materiaBLL.AgregarMateria(txtDescMateria.Text, txtHsSemanales.Text, txtHsTotales.Text, txtIdPlan.Text);
+                    _materiaBLL.AgregarMateria(txtDescMateria.Text, txtHsSemanales.Text, txtHsTotales.Text,(int)cbIdPlan.SelectedValue);
                     MessageBox.Show("Inserción completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarMaterias();
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo insertar los datos por: " + ex,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else // Editar
@@ -49,7 +54,7 @@ namespace CapaPresentacion
                 try
                 {
 
-                    _materiaBLL.ModificarMateria(IdMateria, txtDescMateria.Text, txtHsSemanales.Text, txtHsTotales.Text, txtIdPlan.Text);
+                    _materiaBLL.ModificarMateria(IdMateria, txtDescMateria.Text, txtHsSemanales.Text, txtHsTotales.Text, (int)cbIdPlan.SelectedValue);
                     MessageBox.Show("Edición completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarMaterias();
                     limpiarForm();
@@ -70,7 +75,7 @@ namespace CapaPresentacion
                 txtDescMateria.Text = dataGridView1.CurrentRow.Cells["DescMateria"].Value?.ToString() ?? "";
                 txtHsSemanales.Text = dataGridView1.CurrentRow.Cells["HsSemanales"].Value?.ToString() ?? "";
                 txtHsTotales.Text = dataGridView1.CurrentRow.Cells["HsTotales"].Value?.ToString() ?? "";
-                txtIdPlan.Text = dataGridView1.CurrentRow.Cells["IdPlan"].Value?.ToString() ?? "";
+                cbIdPlan.SelectedValue = Convert.ToInt32(dataGridView1.CurrentRow.Cells["IdPlan"].Value);
             }
             else
                 MessageBox.Show("Seleccione una fila por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -80,7 +85,7 @@ namespace CapaPresentacion
             txtDescMateria.Clear();
             txtHsSemanales.Clear();
             txtHsTotales.Clear();
-            txtIdPlan.Clear();
+            cbIdPlan.SelectedIndex = -1;
         }
         private void btnBorrar_Click(object sender, EventArgs e)
         {

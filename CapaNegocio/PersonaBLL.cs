@@ -20,9 +20,13 @@ namespace CapaNegocio
         {
             return _personaDAL.GetAllPersona();
         }
+        public List<Plane> GetAllPlanes()
+        {
+            return _personaDAL.GetAllPlanes();
+        }
 
         public void AgregarPersona(string NombrePersona, string Apellido, string Direccion, string Mail,
-            string Telefono, DateTime FechaNac, string Legajo, string TipoPersona, string IdPlan)
+            string Telefono, DateTime FechaNac, string Legajo, string TipoPersona, int IdPlan)
         {
             Persona persona = new Persona()
             {
@@ -34,7 +38,7 @@ namespace CapaNegocio
                 FechaNac = FechaNac,
                 Legajo = Convert.ToInt32(Legajo),
                 TipoPersona = ConvertTP(TipoPersona),
-                IdPlan = Convert.ToInt32(IdPlan)
+                IdPlan = IdPlan
 
             };
 
@@ -54,7 +58,7 @@ namespace CapaNegocio
         }
 
         public void ModificarPersona(string IdPersona, string NombrePersona, string Apellido, string Direccion, string Mail,
-            string Telefono, DateTime FechaNac, string Legajo, string TipoPersona, string IdPlan)
+            string Telefono, DateTime FechaNac, string Legajo, string TipoPersona, int IdPlan)
         {
             _personaDAL.ModificarPersona(Convert.ToInt32(IdPersona),
                                          NombrePersona,
@@ -65,7 +69,7 @@ namespace CapaNegocio
                                          FechaNac,
                                          Convert.ToInt32(Legajo),
                                          ConvertTP(TipoPersona),
-                                         Convert.ToInt32(IdPlan));
+                                         IdPlan);
         }
 
 
