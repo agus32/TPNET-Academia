@@ -46,16 +46,16 @@ namespace CapaPresentacion
                         txtDireccion_frmAltaPersona.Text, txtMail_frmAltaPersona.Text, txtTelefono_frmAltaPersona.Text,
                         dtpFechaNac_frmAltaPersona.Value, txtLegajo_frmAltaPersona.Text, cbTipoPersona_frmAltaPersona.SelectedItem.ToString(),
                         cbPlan_frmAltaPersona.SelectedItem.ToString());
-                    MessageBox.Show("Se guardo de forma correcta");
+                    MessageBox.Show("Inserción completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarPersonas();
                     LimpiarForm();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se insertaron los datos por: " + ex);
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            else 
             {
                 try
                 {
@@ -63,14 +63,14 @@ namespace CapaPresentacion
                         txtDireccion_frmAltaPersona.Text, txtMail_frmAltaPersona.Text, txtTelefono_frmAltaPersona.Text,
                         dtpFechaNac_frmAltaPersona.Value, txtLegajo_frmAltaPersona.Text,
                         cbTipoPersona_frmAltaPersona.SelectedItem.ToString(), cbPlan_frmAltaPersona.SelectedItem.ToString());
-                    MessageBox.Show("Se edito correctamente");
+                    MessageBox.Show("Edición completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarPersonas();
                     LimpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo editar los datos por: " + ex);
+                    MessageBox.Show("No se pudo editar los datos por: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -106,7 +106,7 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show("Seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -116,11 +116,11 @@ namespace CapaPresentacion
             {
 
                 _personaBLL.BorrarPersona(dgvPersonas_AltaPersonas.CurrentRow.Cells["IdPersona"].Value.ToString());
-                MessageBox.Show("Eliminado correctamente");
+                MessageBox.Show("Se ha eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarPersonas();
             }
             else
-                MessageBox.Show("Seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnClose_Click(object sender, EventArgs e)

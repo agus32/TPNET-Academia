@@ -33,13 +33,13 @@ namespace CapaPresentacion
                 {
 
                     _cursoBLL.AgregarCurso(txtIdMateria.Text, txtIdComision.Text, txtAnioCalendario.Text, txtCupo.Text);
-                    MessageBox.Show("se inserto correctamente");
+                    MessageBox.Show("Inserción completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarCursos();
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se pudo insertar los datos por: " + ex);
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else // Editar
@@ -48,14 +48,14 @@ namespace CapaPresentacion
                 {
 
                     _cursoBLL.ModificarCurso(IdCurso, txtIdMateria.Text, txtIdComision.Text, txtAnioCalendario.Text, txtCupo.Text);
-                    MessageBox.Show("se edito correctamente");
+                    MessageBox.Show("Edición completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarCursos();
                     limpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se pudo editar los datos por: " + ex);
+                    MessageBox.Show("No se pudo editar los datos por: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -71,7 +71,7 @@ namespace CapaPresentacion
                 txtCupo.Text = dataGridView1.CurrentRow.Cells["Cupo"].Value?.ToString() ?? "";
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void limpiarForm()
         {
@@ -86,11 +86,11 @@ namespace CapaPresentacion
             {
 
                 _cursoBLL.BorrarCurso(dataGridView1.CurrentRow.Cells["IdCurso"].Value.ToString());
-                MessageBox.Show("Eliminado correctamente");
+                MessageBox.Show("Se ha eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarCursos();
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

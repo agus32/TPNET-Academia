@@ -35,13 +35,13 @@ namespace CapaPresentacion
                 {
 
                     _usuarioBLL.AgregarUsuario(txtNombreUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, txtIdPersona.Text);
-                    MessageBox.Show("se inserto correctamente");
+                    MessageBox.Show("Inserción completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarUsuarios();
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se pudo insertar los datos por: " + ex);
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else // Editar
@@ -50,14 +50,14 @@ namespace CapaPresentacion
                 {
 
                     _usuarioBLL.ModificarUsuario(IdUsuario, txtNombreUsuario.Text, txtClave.Text, txtNombre.Text, txtApellido.Text, txtEmail.Text, txtIdPersona.Text);
-                    MessageBox.Show("se edito correctamente");
+                    MessageBox.Show("Edición completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarUsuarios();
                     limpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se pudo editar los datos por: " + ex);
+                    MessageBox.Show("No se pudo editar los datos por: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -75,7 +75,7 @@ namespace CapaPresentacion
                 txtIdPersona.Text = dataGridView1.CurrentRow.Cells["IdPersona"].Value.ToString();
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void limpiarForm()
         {
@@ -92,11 +92,13 @@ namespace CapaPresentacion
             {
 
                 _usuarioBLL.BorrarUsuario(dataGridView1.CurrentRow.Cells["IdUsuario"].Value.ToString());
-                MessageBox.Show("Eliminado correctamente");
+                MessageBox.Show("Se ha eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarUsuarios();
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            
+            
         }
 
         private void btnMenu_Click (object sender, EventArgs e)

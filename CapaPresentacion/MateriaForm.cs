@@ -35,13 +35,13 @@ namespace CapaPresentacion
                 {
 
                     _materiaBLL.AgregarMateria(txtDescMateria.Text, txtHsSemanales.Text, txtHsTotales.Text, txtIdPlan.Text);
-                    MessageBox.Show("se inserto correctamente");
+                    MessageBox.Show("Inserción completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarMaterias();
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se pudo insertar los datos por: " + ex);
+                    MessageBox.Show("No se pudo insertar los datos por: " + ex,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else // Editar
@@ -50,14 +50,14 @@ namespace CapaPresentacion
                 {
 
                     _materiaBLL.ModificarMateria(IdMateria, txtDescMateria.Text, txtHsSemanales.Text, txtHsTotales.Text, txtIdPlan.Text);
-                    MessageBox.Show("se edito correctamente");
+                    MessageBox.Show("Edición completada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MostrarMaterias();
                     limpiarForm();
                     Editar = false;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("no se pudo editar los datos por: " + ex);
+                    MessageBox.Show("No se pudo editar los datos por: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -73,7 +73,7 @@ namespace CapaPresentacion
                 txtIdPlan.Text = dataGridView1.CurrentRow.Cells["IdPlan"].Value?.ToString() ?? "";
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void limpiarForm()
         {
@@ -88,11 +88,11 @@ namespace CapaPresentacion
             {
 
                 _materiaBLL.BorrarMateria(dataGridView1.CurrentRow.Cells["IdMateria"].Value.ToString());
-                MessageBox.Show("Eliminado correctamente");
+                MessageBox.Show("Se ha eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarMaterias();
             }
             else
-                MessageBox.Show("seleccione una fila por favor");
+                MessageBox.Show("Seleccione una fila por favor", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
